@@ -35,7 +35,7 @@ TARGET_NO_BOOTLOADER := true
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH_VARIANT := armv7-a-neon
-TARGET_ARCH_VARIANT_CPU := cortex-a9
+TARGET_CPU_VARIANT := cortex-a9
 TARGET_CPU_SMP := true
 TARGET_ARCH := arm
 ARCH_ARM_HAVE_TLS_REGISTER := true
@@ -43,9 +43,11 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 NEED_WORKAROUND_CORTEX_A9_745320 := true
 
 # Boot/Recovery image settings  
-BOARD_KERNEL_CMDLINE := 
+BOARD_KERNEL_CMDLINE := zcache
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE :=
+TARGET_RECOVERY_FSTAB := device/ouya/ouya_1_1/ramdisk/fstab.cardhu
+RECOVERY_FSTAB_VERSION := 2
 
 # EGL settings
 BOARD_EGL_CFG := device/ouya/ouya_1_1/prebuilt/egl.cfg
@@ -84,7 +86,7 @@ TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
 
 # Build kernel from source
 TARGET_KERNEL_SOURCE := kernel/ouya/ouya_1_1
-TARGET_KERNEL_CONFIG := ouya_1_1_defconfig 
+TARGET_KERNEL_CONFIG := cyanogen_ouya_1_1_defconfig 
 
 # Recovery Options
 BOARD_HAS_NO_SELECT_BUTTON := true

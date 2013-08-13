@@ -31,7 +31,6 @@ PRODUCT_COPY_FILES += \
 
 # Prebuilt configuration files
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/vold.fstab:system/etc/vold.fstab \
     $(LOCAL_PATH)/prebuilt/audio_policy.conf:system/etc/audio_policy.conf
 
 # Input device configuration files
